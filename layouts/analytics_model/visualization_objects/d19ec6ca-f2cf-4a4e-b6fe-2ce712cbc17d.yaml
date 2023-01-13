@@ -1,0 +1,23 @@
+content:
+  buckets:
+    - items:
+        - measure:
+            definition:
+              measureDefinition:
+                filters: []
+                item:
+                  identifier:
+                    id: average_of_days_to_close_deal
+                    type: metric
+            format: '#,##0'
+            localIdentifier: 4229ff79eeb54f33a6b564bb8b20f889
+            title: 'Average # of days to close deal'
+      localIdentifier: measures
+  filters: []
+  properties: {}
+  sorts: []
+  version: '2'
+  visualizationUrl: local:headline
+description: ''
+id: d19ec6ca-f2cf-4a4e-b6fe-2ce712cbc17d
+title: 'Average # of Days to Close Deal'

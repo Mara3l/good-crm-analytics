@@ -1,0 +1,6 @@
+content:
+  format: '#,##0.00'
+  maql: SELECT SUM({fact/amount}) WHERE {label/stage} = "Closed - Win"
+description: ''
+id: revenue
+title: Revenue

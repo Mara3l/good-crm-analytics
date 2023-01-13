@@ -1,0 +1,33 @@
+content:
+  buckets:
+    - items:
+        - measure:
+            definition:
+              measureDefinition:
+                aggregation: count
+                filters: []
+                item:
+                  identifier:
+                    id: deals.id
+                    type: attribute
+            format: '#,##0'
+            localIdentifier: 0ff40881e0ac4059bb2554069403afc0
+            title: Count of Id
+      localIdentifier: measures
+  filters:
+    - negativeAttributeFilter:
+        displayForm:
+          identifier:
+            id: stage
+            type: label
+        notIn:
+          values:
+            - Closed - Lost
+            - Closed - Win
+  properties: {}
+  sorts: []
+  version: '2'
+  visualizationUrl: local:headline
+description: ''
+id: e472ab48-c9c3-44e1-afa5-686033c11324
+title: '# of Prospects in Pipeline'

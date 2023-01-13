@@ -1,0 +1,23 @@
+content:
+  buckets:
+    - items:
+        - measure:
+            definition:
+              measureDefinition:
+                filters: []
+                item:
+                  identifier:
+                    id: revenue
+                    type: metric
+            format: '#,##0.00$'
+            localIdentifier: 703e75924f6c4456a730738365cc4167
+            title: Revenue
+      localIdentifier: measures
+  filters: []
+  properties: {}
+  sorts: []
+  version: '2'
+  visualizationUrl: local:headline
+description: ''
+id: 2f44a54d-9739-4214-acf4-45773a3af2a8
+title: Revenue

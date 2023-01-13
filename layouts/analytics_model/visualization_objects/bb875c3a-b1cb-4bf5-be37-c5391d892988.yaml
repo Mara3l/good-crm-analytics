@@ -1,0 +1,32 @@
+content:
+  buckets:
+    - items:
+        - measure:
+            definition:
+              measureDefinition:
+                aggregation: count
+                filters: []
+                item:
+                  identifier:
+                    id: deals.id
+                    type: attribute
+            format: '#,##0'
+            localIdentifier: 21e3cfc0796b438faba49973d04b7189
+            title: Count of Id
+      localIdentifier: measures
+  filters:
+    - positiveAttributeFilter:
+        displayForm:
+          identifier:
+            id: stage
+            type: label
+        in:
+          values:
+            - Closed - Win
+  properties: {}
+  sorts: []
+  version: '2'
+  visualizationUrl: local:headline
+description: ''
+id: bb875c3a-b1cb-4bf5-be37-c5391d892988
+title: '# of Win Prospects'

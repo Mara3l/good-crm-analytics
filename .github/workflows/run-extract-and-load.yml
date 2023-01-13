@@ -1,0 +1,32 @@
+name: Run extract and load
+on:
+  push:
+  schedule:
+    - cron: "0 2 * * *"
+  workflow_dispatch:
+jobs:
+  run_extract_load:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt          
+
+      - name: Extract and load
+        run: python ./src/extract_load.py    
+        env: 
+          EXTRACT_AIRTABLE_API_KEY: ${{ secrets.EXTRACT_AIRTABLE_API_KEY }}
+          EXTRACT_AIRTABLE_BASE_ID: ${{ secrets.EXTRACT_AIRTABLE_BASE_ID }}
+          EXTRACT_AIRTABLE_TABLES: '${{ secrets.EXTRACT_AIRTABLE_TABLES }}'
+          LOAD_DATABASE_HOST: ${{ secrets.LOAD_DATABASE_HOST }}
+          LOAD_DATABASE_PORT: ${{ secrets.LOAD_DATABASE_PORT }}
+          LOAD_DATABASE_USERNAME: ${{ secrets.LOAD_DATABASE_USERNAME }}
+          LOAD_DATABASE_PASSWORD: ${{ secrets.LOAD_DATABASE_PASSWORD }}
+          LOAD_DATABASE_NAME: ${{ secrets.LOAD_DATABASE_NAME }}
+          LOAD_DATABASE_SCHEMA: ${{ secrets.LOAD_DATABASE_SCHEMA }}
+          LOAD_DATABASE_TABLE_NAMES: '${{ secrets.LOAD_DATABASE_TABLE_NAMES }}'

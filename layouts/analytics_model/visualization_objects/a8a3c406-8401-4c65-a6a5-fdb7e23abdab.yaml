@@ -1,0 +1,32 @@
+content:
+  buckets:
+    - items:
+        - measure:
+            definition:
+              measureDefinition:
+                aggregation: count
+                filters: []
+                item:
+                  identifier:
+                    id: deals.id
+                    type: attribute
+            format: '#,##0'
+            localIdentifier: 21e3cfc0796b438faba49973d04b7189
+            title: Count of Id
+      localIdentifier: measures
+  filters:
+    - positiveAttributeFilter:
+        displayForm:
+          identifier:
+            id: stage
+            type: label
+        in:
+          values:
+            - Closed - Lost
+  properties: {}
+  sorts: []
+  version: '2'
+  visualizationUrl: local:headline
+description: ''
+id: a8a3c406-8401-4c65-a6a5-fdb7e23abdab
+title: '# of Lost Prospects'

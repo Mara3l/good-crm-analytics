@@ -1,0 +1,6 @@
+content:
+  format: '#,##0.00'
+  maql: SELECT SUM({fact/amount}) / COUNT({label/deals.id})
+description: ''
+id: average_deal_size
+title: Average deal size

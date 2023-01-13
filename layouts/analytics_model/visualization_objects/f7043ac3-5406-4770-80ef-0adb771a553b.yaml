@@ -1,0 +1,37 @@
+content:
+  buckets:
+    - items:
+        - measure:
+            definition:
+              measureDefinition:
+                aggregation: count
+                filters: []
+                item:
+                  identifier:
+                    id: companies.id
+                    type: attribute
+            format: '#,##0'
+            localIdentifier: 3590a08e917243eeb8d3d5037106d4cb
+            title: Count of Id
+      localIdentifier: measures
+    - items:
+        - attribute:
+            displayForm:
+              identifier:
+                id: type
+                type: label
+            localIdentifier: f5d0a15c798e4bb4a22fd0031949f409
+      localIdentifier: view
+  filters: []
+  properties:
+    controls:
+      dataLabels:
+        visible: auto
+      legend:
+        position: top
+  sorts: []
+  version: '2'
+  visualizationUrl: local:pie
+description: ''
+id: f7043ac3-5406-4770-80ef-0adb771a553b
+title: Companies / Industry

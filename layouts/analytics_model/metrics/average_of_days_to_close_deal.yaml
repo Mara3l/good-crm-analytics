@@ -1,0 +1,6 @@
+content:
+  format: '#,##0.00'
+  maql: SELECT AVG(DATETIME_DIFF({label/open_date.day},{label/close_date.day}))
+description: ''
+id: average_of_days_to_close_deal
+title: 'Average # of days to close deal'

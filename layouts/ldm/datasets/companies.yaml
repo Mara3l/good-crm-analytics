@@ -1,0 +1,62 @@
+attributes:
+  - description: Address
+    id: address
+    labels: []
+    sourceColumn: address
+    tags:
+      - Companies
+    title: Address
+  - description: Id
+    id: companies.id
+    labels: []
+    sourceColumn: id
+    tags:
+      - Companies
+    title: Id
+  - description: Name
+    id: companies.name
+    labels: []
+    sourceColumn: name
+    tags:
+      - Companies
+    title: Name
+  - description: Description
+    id: description
+    labels: []
+    sourceColumn: description
+    tags:
+      - Companies
+    title: Description
+  - description: Type
+    id: type
+    labels: []
+    sourceColumn: type
+    tags:
+      - Companies
+    title: Type
+dataSourceTableId:
+  dataSourceId: 73c038bc-685e-46bd-a4fc-ccf1aa811700
+  id: companies
+  type: dataSource
+description: Companies
+facts:
+  - description: Employees
+    id: employees
+    sourceColumn: employees
+    tags:
+      - Companies
+    title: Employees
+grain:
+  - id: companies.id
+    type: attribute
+id: companies
+references:
+  - identifier:
+      id: contacts
+      type: dataset
+    multivalue: false
+    sourceColumns:
+      - contact_id
+tags:
+  - Companies
+title: Companies

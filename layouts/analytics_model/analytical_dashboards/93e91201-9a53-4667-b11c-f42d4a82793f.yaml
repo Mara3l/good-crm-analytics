@@ -1,0 +1,210 @@
+content:
+  filterContextRef:
+    identifier:
+      id: 542c960e-041d-4cfa-bba5-d1ec16cf3243
+      type: filterContext
+  layout:
+    sections:
+      - header:
+          title: Quick overview
+        items:
+          - size:
+              xl:
+                gridWidth: 2
+            type: IDashboardLayoutItem
+            widget:
+              dateDataSet:
+                identifier:
+                  id: close_date
+                  type: dataset
+              description: ''
+              drills: []
+              ignoreDashboardFilters: []
+              insight:
+                identifier:
+                  id: 2f44a54d-9739-4214-acf4-45773a3af2a8
+                  type: visualizationObject
+              properties: {}
+              title: Revenue
+              type: insight
+          - size:
+              xl:
+                gridWidth: 3
+            type: IDashboardLayoutItem
+            widget:
+              dateDataSet:
+                identifier:
+                  id: close_date
+                  type: dataset
+              description: ''
+              drills: []
+              ignoreDashboardFilters: []
+              insight:
+                identifier:
+                  id: 2928eaa6-2c47-47a8-af15-e5d093f79c9d
+                  type: visualizationObject
+              properties: {}
+              title: '# of Deals in Pipeline'
+              type: insight
+          - size:
+              xl:
+                gridWidth: 3
+            type: IDashboardLayoutItem
+            widget:
+              dateDataSet:
+                identifier:
+                  id: close_date
+                  type: dataset
+              description: ''
+              drills: []
+              ignoreDashboardFilters: []
+              insight:
+                identifier:
+                  id: f938f717-9f93-40bd-82b0-8c8e3c81ccec
+                  type: visualizationObject
+              properties: {}
+              title: '# of Won Deals'
+              type: insight
+          - size:
+              xl:
+                gridWidth: 2
+            type: IDashboardLayoutItem
+            widget:
+              dateDataSet:
+                identifier:
+                  id: close_date
+                  type: dataset
+              description: ''
+              drills: []
+              ignoreDashboardFilters: []
+              insight:
+                identifier:
+                  id: f86cfbcc-7e35-48d9-9c47-802417c4a545
+                  type: visualizationObject
+              properties: {}
+              title: '# of Lost Deals'
+              type: insight
+        type: IDashboardLayoutSection
+      - header:
+          title: Deals Details
+        items:
+          - size:
+              xl:
+                gridWidth: 2
+            type: IDashboardLayoutItem
+            widget:
+              dateDataSet:
+                identifier:
+                  id: close_date
+                  type: dataset
+              description: ''
+              drills: []
+              ignoreDashboardFilters: []
+              insight:
+                identifier:
+                  id: 04c37b56-8fb5-42a8-bc0f-8f336ba0c7f4
+                  type: visualizationObject
+              properties: {}
+              title: Average Deal Size
+              type: insight
+          - size:
+              xl:
+                gridWidth: 2
+            type: IDashboardLayoutItem
+            widget:
+              dateDataSet:
+                identifier:
+                  id: close_date
+                  type: dataset
+              description: ''
+              drills: []
+              ignoreDashboardFilters: []
+              insight:
+                identifier:
+                  id: d19ec6ca-f2cf-4a4e-b6fe-2ce712cbc17d
+                  type: visualizationObject
+              properties: {}
+              title: 'Average # of Days to Close Deal'
+              type: insight
+          - size:
+              xl:
+                gridWidth: 8
+            type: IDashboardLayoutItem
+            widget:
+              dateDataSet:
+                identifier:
+                  id: close_date
+                  type: dataset
+              description: ''
+              drills: []
+              ignoreDashboardFilters: []
+              insight:
+                identifier:
+                  id: cad8ce31-6a02-4a8b-abbf-98d1e557e006
+                  type: visualizationObject
+              properties: {}
+              title: Closed deals / Month
+              type: insight
+          - size:
+              xl:
+                gridWidth: 6
+            type: IDashboardLayoutItem
+            widget:
+              dateDataSet:
+                identifier:
+                  id: close_date
+                  type: dataset
+              description: ''
+              drills: []
+              ignoreDashboardFilters: []
+              insight:
+                identifier:
+                  id: ee1d4626-6c24-4877-9b92-aab672e19f93
+                  type: visualizationObject
+              properties: {}
+              title: Upcoming deals / Stages
+              type: insight
+          - size:
+              xl:
+                gridWidth: 6
+            type: IDashboardLayoutItem
+            widget:
+              dateDataSet:
+                identifier:
+                  id: close_date
+                  type: dataset
+              description: ''
+              drills: []
+              ignoreDashboardFilters: []
+              insight:
+                identifier:
+                  id: f7043ac3-5406-4770-80ef-0adb771a553b
+                  type: visualizationObject
+              properties: {}
+              title: Companies / Industry
+              type: insight
+          - size:
+              xl:
+                gridWidth: 6
+            type: IDashboardLayoutItem
+            widget:
+              dateDataSet:
+                identifier:
+                  id: close_date
+                  type: dataset
+              description: ''
+              drills: []
+              ignoreDashboardFilters: []
+              insight:
+                identifier:
+                  id: 4311d05e-b55f-457f-abf8-bdb03052c4f0
+                  type: visualizationObject
+              properties: {}
+              title: Avg Deal Size / Industry
+              type: insight
+        type: IDashboardLayoutSection
+    type: IDashboardLayout
+  version: '2'
+description: ''
+id: 93e91201-9a53-4667-b11c-f42d4a82793f
+title: Overview

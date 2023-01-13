@@ -1,0 +1,43 @@
+attributes:
+  - description: Id
+    id: contacts.id
+    labels: []
+    sourceColumn: id
+    tags:
+      - Contacts
+    title: Id
+  - description: Name
+    id: contacts.name
+    labels: []
+    sourceColumn: name
+    tags:
+      - Contacts
+    title: Name
+  - description: Email address
+    id: email_address
+    labels: []
+    sourceColumn: email_address
+    tags:
+      - Contacts
+    title: Email address
+  - description: Phone
+    id: phone
+    labels: []
+    sourceColumn: phone
+    tags:
+      - Contacts
+    title: Phone
+dataSourceTableId:
+  dataSourceId: 73c038bc-685e-46bd-a4fc-ccf1aa811700
+  id: contacts
+  type: dataSource
+description: Contacts
+facts: []
+grain:
+  - id: contacts.id
+    type: attribute
+id: contacts
+references: []
+tags:
+  - Contacts
+title: Contacts

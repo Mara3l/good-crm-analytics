@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: companies
+    columns:
+      - name: id
+        tests:
+          - dbt_constraints.primary_key
+      - name: contact_id
+        tests:
+          - dbt_constraints.foreign_key:
+              pk_table_name: ref('contacts')
+              pk_column_name: id

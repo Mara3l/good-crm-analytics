@@ -1,0 +1,42 @@
+content:
+  buckets:
+    - items:
+        - measure:
+            alias: '# of Deals'
+            definition:
+              measureDefinition:
+                aggregation: count
+                filters: []
+                item:
+                  identifier:
+                    id: deals.id
+                    type: attribute
+            format: '#,##0'
+            localIdentifier: 04acd997d0f243fa89d1163a9d84acf1
+            title: Count of Id
+      localIdentifier: measures
+    - items:
+        - attribute:
+            displayForm:
+              identifier:
+                id: stage
+                type: label
+            localIdentifier: 0e756241dd6b44a4a609d252aec3b837
+      localIdentifier: view
+  filters:
+    - negativeAttributeFilter:
+        displayForm:
+          identifier:
+            id: stage
+            type: label
+        notIn:
+          values:
+            - Closed - Lost
+            - Closed - Win
+  properties: {}
+  sorts: []
+  version: '2'
+  visualizationUrl: local:bar
+description: ''
+id: ee1d4626-6c24-4877-9b92-aab672e19f93
+title: Upcoming deals / Stages

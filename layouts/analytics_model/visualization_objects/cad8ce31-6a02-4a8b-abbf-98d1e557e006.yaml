@@ -1,0 +1,50 @@
+content:
+  buckets:
+    - items:
+        - measure:
+            alias: '# of Deals'
+            definition:
+              measureDefinition:
+                aggregation: count
+                computeRatio: false
+                filters: []
+                item:
+                  identifier:
+                    id: deals.id
+                    type: attribute
+            format: '#,##0'
+            localIdentifier: 06c066504bca47358f71e5bcab7fc730
+            title: Count of Id
+      localIdentifier: measures
+    - items:
+        - attribute:
+            alias: Close date
+            displayForm:
+              identifier:
+                id: close_date.month
+                type: label
+            localIdentifier: fc6f3ea128484441a9e14344aa6cc891
+      localIdentifier: view
+  filters:
+    - positiveAttributeFilter:
+        displayForm:
+          identifier:
+            id: stage
+            type: label
+        in:
+          values:
+            - Closed - Lost
+            - Closed - Win
+  properties:
+    controls:
+      colorMapping:
+        - color:
+            type: guid
+            value: '2'
+          id: 06c066504bca47358f71e5bcab7fc730
+  sorts: []
+  version: '2'
+  visualizationUrl: local:bar
+description: ''
+id: cad8ce31-6a02-4a8b-abbf-98d1e557e006
+title: Closed deals / Month

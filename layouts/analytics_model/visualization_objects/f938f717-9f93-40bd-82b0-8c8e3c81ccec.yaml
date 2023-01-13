@@ -1,0 +1,32 @@
+content:
+  buckets:
+    - items:
+        - measure:
+            definition:
+              measureDefinition:
+                aggregation: count
+                filters: []
+                item:
+                  identifier:
+                    id: deals.id
+                    type: attribute
+            format: '#,##0'
+            localIdentifier: 7b51465a424046ebae76b3943997af0b
+            title: Count of Id
+      localIdentifier: measures
+  filters:
+    - positiveAttributeFilter:
+        displayForm:
+          identifier:
+            id: stage
+            type: label
+        in:
+          values:
+            - Closed - Win
+  properties: {}
+  sorts: []
+  version: '2'
+  visualizationUrl: local:headline
+description: ''
+id: f938f717-9f93-40bd-82b0-8c8e3c81ccec
+title: '# of Won Deals'

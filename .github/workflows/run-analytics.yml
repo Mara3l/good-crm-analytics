@@ -1,0 +1,25 @@
+name: Run analytics
+on:
+  workflow_run:
+    workflows: [ "Run dbt" ]
+    types:
+      - completed
+jobs:
+  run_extract_load:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt    
+
+      - name: Extract and load
+        run: python ./src/analytics.py    
+        env: 
+          ANALYTICS_GOODDATA_HOST: ${{ secrets.ANALYTICS_GOODDATA_HOST }}
+          ANALYTICS_GOODDATA_TOKEN: ${{ secrets.ANALYTICS_GOODDATA_TOKEN }}
+          ANALYTICS_GOODDATA_DATASOURCE_ID: '${{ secrets.ANALYTICS_GOODDATA_DATASOURCE_ID }}'

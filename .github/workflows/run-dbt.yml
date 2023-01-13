@@ -1,0 +1,37 @@
+name: Run dbt
+on:
+  workflow_run:
+    workflows: [ "Run extract and load" ]
+    types:
+      - completed
+jobs:
+  run_extract_load:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./src/transform
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      
+      - name: Install dependencies
+        run: |
+          pip install dbt-core dbt-postgres
+          dbt deps
+      
+      - name: Run and test dbt
+        run: |
+          dbt run --profiles-dir profile --target dev
+          dbt test --profiles-dir profile --target dev
+        env: 
+          LOAD_DATABASE_HOST: ${{ secrets.LOAD_DATABASE_HOST }}
+          LOAD_DATABASE_PORT: ${{ secrets.LOAD_DATABASE_PORT }}
+          LOAD_DATABASE_USERNAME: ${{ secrets.LOAD_DATABASE_USERNAME }}
+          LOAD_DATABASE_PASSWORD: ${{ secrets.LOAD_DATABASE_PASSWORD }}
+          LOAD_DATABASE_NAME: ${{ secrets.LOAD_DATABASE_NAME }}
+          LOAD_DATABASE_SCHEMA: ${{ secrets.LOAD_DATABASE_SCHEMA }}
+          LOAD_DATABASE_TABLE_NAMES: '${{ secrets.LOAD_DATABASE_TABLE_NAMES }}'

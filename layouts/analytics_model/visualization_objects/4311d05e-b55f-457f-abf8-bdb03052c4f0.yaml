@@ -1,0 +1,30 @@
+content:
+  buckets:
+    - items:
+        - measure:
+            definition:
+              measureDefinition:
+                filters: []
+                item:
+                  identifier:
+                    id: average_deal_size
+                    type: metric
+            localIdentifier: 07c07fb92f284b0db14ae2a0f24c1188
+            title: Average deal size
+      localIdentifier: measures
+    - items:
+        - attribute:
+            displayForm:
+              identifier:
+                id: type
+                type: label
+            localIdentifier: 44da252b449a4911b6c46613313749d9
+      localIdentifier: view
+  filters: []
+  properties: {}
+  sorts: []
+  version: '2'
+  visualizationUrl: local:bar
+description: ''
+id: 4311d05e-b55f-457f-abf8-bdb03052c4f0
+title: Avg Deal Size / Industry

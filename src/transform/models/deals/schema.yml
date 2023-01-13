@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: deals
+    columns:
+      - name: id
+        tests:
+          - dbt_constraints.primary_key
+      - name: account_id
+        tests:
+          - dbt_constraints.foreign_key:
+              pk_table_name: ref('companies')
+              pk_column_name: id

@@ -1,0 +1,79 @@
+attributes:
+  - description: Id
+    id: deals.id
+    labels: []
+    sourceColumn: id
+    tags:
+      - Deals
+    title: Id
+  - description: Name
+    id: deals.name
+    labels: []
+    sourceColumn: name
+    tags:
+      - Deals
+    title: Name
+  - description: Details
+    id: details
+    labels: []
+    sourceColumn: details
+    tags:
+      - Deals
+    title: Details
+  - description: Stage
+    id: stage
+    labels: []
+    sourceColumn: stage
+    tags:
+      - Deals
+    title: Stage
+dataSourceTableId:
+  dataSourceId: 73c038bc-685e-46bd-a4fc-ccf1aa811700
+  id: deals
+  type: dataSource
+description: Deals
+facts:
+  - description: Amount
+    id: amount
+    sourceColumn: amount
+    tags:
+      - Deals
+    title: Amount
+  - description: Close probability
+    id: close_probability
+    sourceColumn: close_probability
+    tags:
+      - Deals
+    title: Close probability
+grain:
+  - id: deals.id
+    type: attribute
+id: deals
+references:
+  - identifier:
+      id: close_date
+      type: dataset
+    multivalue: false
+    sourceColumns:
+      - close_date
+  - identifier:
+      id: companies
+      type: dataset
+    multivalue: false
+    sourceColumns:
+      - account_id
+  - identifier:
+      id: last_update
+      type: dataset
+    multivalue: false
+    sourceColumns:
+      - last_update
+  - identifier:
+      id: open_date
+      type: dataset
+    multivalue: false
+    sourceColumns:
+      - open_date
+tags:
+  - Deals
+title: Deals

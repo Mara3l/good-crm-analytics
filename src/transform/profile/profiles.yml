@@ -1,0 +1,11 @@
+transform:
+  outputs:
+    dev:
+      type: postgres
+      host: "{{ env_var('LOAD_DATABASE_HOST') }}"
+      user: "{{ env_var('LOAD_DATABASE_USERNAME') }}"
+      pass: "{{ env_var('LOAD_DATABASE_PASSWORD') }}"
+      port: 5432
+      dbname: "{{ env_var('LOAD_DATABASE_NAME') }}"
+      schema: "{{ env_var('LOAD_DATABASE_SCHEMA') }}"
+  target: dev
